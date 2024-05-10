@@ -198,7 +198,7 @@ o_cycle => w_cycle
 	-- CONCURRENT STATEMENTS ----------------------------
 	an(3 downto 0) <= x"F" when w_cycle = "0001" else
 	                  w_sel;
-	led (12 downto 4) <= "00000000"; 
+	led(12 downto 4) <= (others => '0');
 	led (3 downto 0) <= w_cycle;
 	
 	w_Y <= w_result when w_cycle = "1000" else
